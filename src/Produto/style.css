@@ -1,6 +1,6 @@
 .container-produto{
     width: 80vw;
-    height: 90vh;
+    height: 70vh;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -91,15 +91,47 @@ h1{
     font-stretch: expanded;
     padding: 10px;
     border-radius: 5px;
+    background: gray;
+    color: #fff;    
 }
 
 .redes-contato{
     width: 80%;
     font-size: 12pt;
     text-align: left;
+    display: flex;
+    justify-content: space-around;
 }
 
 .flexColum{
     display: flex;
     flex-direction: column;
+}
+
+.icons{
+    width: 30px;
+    height: 30px;
+    color: #970b32;
+    cursor: pointer;
+    position: relative;
+}
+
+.icons:hover{
+    animation: motion 1.5s infinite;
+}
+
+
+@keyframes motion{
+    0%{
+        transform: translateY(0)
+    }
+    33%{
+        transform: translateY(-10px)  rotate(45deg)
+    }
+    66%{
+        transform: rotate(-45deg)
+    }
+    100%{
+        transform: translateY(0)
+    }
 }

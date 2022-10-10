@@ -1,18 +1,21 @@
-import { Route, Routes, BrowserRouter as Router} from "react-router-dom"
-
 import './App.css';
 
-import Header from './components/Header/Index';
-import Produto from './Produto/Index';
+import Header from './components/Header';
+import Contato from './Contato';
+import Content from "./Content";
+import Footer from "./Footer";
+import Produto from './Produto';
 import Rifas from './Rifas';
-
 
 function App() {
   return (
     <main>
       <Header/>
+      <Contato />
       <Produto />
       <Rifas />
+      <Content />
+      <Footer />
     </main>
   );
 }
