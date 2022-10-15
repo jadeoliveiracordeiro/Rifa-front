@@ -11,7 +11,6 @@ function App() {
   return (
     <main>
       <Header/>
-      <Contato />
       <Produto />
       <Rifas />
       <Content />
