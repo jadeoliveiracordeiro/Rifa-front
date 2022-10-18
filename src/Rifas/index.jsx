@@ -78,14 +78,17 @@ function customer(rifas, handleCheck) {
         )
     }
 }
-function celula(props) {
+function celula(props, rifa) {
 
     props -= 1;
+    
+    if(!rifa.customer){
         if (document.getElementsByClassName("select")[props].checked) {
             document.getElementsByClassName("celula")[props].style.background = "#970b32"
         } else {
             document.getElementsByClassName("celula")[props].style.background = "#000"
         }
+    }
 
 }
 

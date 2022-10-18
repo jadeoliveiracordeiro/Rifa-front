@@ -1,6 +1,6 @@
 .container-pix{
     width: 30vw;
-    height: 80vh;
+    height: 85vh;
     padding: 20px;
     display: none;
     align-items: center;
@@ -31,9 +31,14 @@
     font-family: Arial;
     display: flex;
     flex-direction: column;
-    justyfy-content: center;
+    justify-content: center;
     align-items: center;
     text-align: center;
+}
+
+#button-pix{
+    margin-top: 15px;
+    padding: 5px;
 }
 
 .symbol{

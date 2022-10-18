@@ -5,5 +5,5 @@ export const api = axios.create({
 })
 
 export const getRiflles = async () => {
-    return api.get('/4') //colocar o id da rifa
+    return api.get('/3') //colocar o id da rifa
 }
