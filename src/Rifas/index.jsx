@@ -1,20 +1,25 @@
 import React, { useEffect, useState } from "react";
 import { getRiflles } from "../Services/api";
 import Contato from "../Contato";
-
 import "./style.css"
 
 const Rifas = () => {
 
+
     const [riflles, setRiflles] = useState([])
     const [rifa, setRifa] = useState([])
-
     useEffect(() => {
         (async () => {
             const response = await getRiflles()
             setRiflles(response.data.numbers)
         })()
     }, [])
+    
+    useEffect(() => {
+        (async () => {
+            Navigate
+        })()
+    }, [riflles])
 
     const handleCheck = (event) => {
         var updatedList = [...rifa];
@@ -52,7 +57,7 @@ function customer(rifas, handleCheck) {
     if (rifas.customer) {
 
         return (
-            <label className="celula" onClick={() => celula(rifas.number, rifas)} key={rifas.id} style={{ background: "yellow", color: "#000" }}>
+            <label className="celula" onClick={() => celula(rifas.number, rifas)} key={rifas.id} style={{ background: "yellow", color: "#000"}}>
                 <input
                     type="checkbox"
                     className="select"
