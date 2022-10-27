@@ -15,7 +15,6 @@ const Content = () => {
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam voluptatem porro veritatis eum quidem quam, distinctio temporibus fugit, perferendis, tenetur aliquam aut repellendus culpa. Ullam quisquam voluptatibus sit architecto accusantium.
                 </p>
             </section>
-            <Photos />
         </>
     )
 }

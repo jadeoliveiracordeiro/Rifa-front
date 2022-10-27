@@ -5,8 +5,9 @@ import PIX from "../PIX"
 import { api } from "../Services/api";
 
 import "./style.css"
+import { useNavigate } from 'react-router-dom';
 
-let prosseguir = false;
+let prosseguir = false
 
 const Contato = (rifa) => {
 
@@ -14,16 +15,14 @@ const Contato = (rifa) => {
     const [dados, setDados] = useState({})
     const [customer, setCustomer] = useState({})
 
-
     useEffect(() => {
 
         (async () => {
             setNumber([rifa.rifa]);
-            setDados({ idRaffle: 4, numbers: rifa.rifa })
+            setDados({ idRaffle: 3, numbers: rifa.rifa })
         })()
 
     }, [rifa.rifa.length])
-
 
     function visivel() {
 
@@ -56,11 +55,22 @@ const Contato = (rifa) => {
             });
     }
 
+    let val = ""
+
     const handleInputChange = (e) => {
 
         const { name, value } = e.target
         setCustomer({ ...customer, [name]: value })
         setDados({ ...dados, customer })
+
+        if(document.getElementsByClassName("p_input")){
+            if(document.getElementsByClassName("p_input")[1].value.length > 11){
+                document.getElementsByClassName("p_input")[1].value = val
+            }else{
+                val += document.getElementsByClassName("p_input")[1].value
+                console.log(val)
+            }
+        }
 
         console.log(dados)
 
@@ -69,7 +79,7 @@ const Contato = (rifa) => {
     return (
         <div className='container-contato'>
 
-            {visivel() ? <PIX rifa={rifa} /> : ""}
+            {visivel() ? <PIX rifa={rifa}/> : ""}
 
             <a
                 className='close'
@@ -89,7 +99,6 @@ const Contato = (rifa) => {
                 <label className="container-contato-label">
                     <p>Telefone: </p>
                     <input onChange={handleInputChange} type="number" className="p_input" name="phoneNumber" />
-
                 </label>
                 <label>
                     <input onChange={handleInputChange} type="text" value={number || ""} name="numbers" className="p_input numbers" />
