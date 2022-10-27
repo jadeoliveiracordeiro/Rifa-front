@@ -68,12 +68,8 @@ const Contato = (rifa) => {
                 document.getElementsByClassName("p_input")[1].value = val
             }else{
                 val += document.getElementsByClassName("p_input")[1].value
-                console.log(val)
             }
         }
-
-        console.log(dados)
-
     }
 
     return (

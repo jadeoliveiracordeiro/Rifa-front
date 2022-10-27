@@ -11,13 +11,13 @@ var img = document.createElement('img');
     img.setAttribute('className', 'trocar')
 
 function trocarImages(props) {
-    if (props == 0) {
+    if (props === 0) {
         img.setAttribute("src", Image)
     }
-    if (props == 1) {
+    if (props === 1) {
         img.setAttribute("src", Image2)
     }
-    if (props == 2) {
+    if (props === 2) {
         img.setAttribute("src", Image3)
     }
     document.getElementsByClassName("exposicao")[0].innerHTML = ""
@@ -28,7 +28,7 @@ const Produto = () => {
     return (
         <section className="container-produto">
             <div className="container-produto-image flexColum">
-                <h1>Camisa </h1>
+                <h1 style={{textAlign: "center"}}> - Perfume Lily - </h1>
                 <section className="exposicao flexColum">
                     <img src={Image}/>
                 </section>
