@@ -1,7 +1,7 @@
 import './style.css';
 
 import Header from '../components/Header';
-import Content from "../Content";
+//import Content from "../Content";
 import Footer from "../Footer";
 import Produto from '../Produto';
 import Rifas from '../Rifas';
@@ -12,7 +12,7 @@ const Home = () => {
       <Header/>
       <Produto />
       <Rifas />
-      <Content />
+      {/*<Content />*/}
       <Footer />
     </main>
   );
